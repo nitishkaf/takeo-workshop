@@ -1,0 +1,28 @@
+* {
+  font-family: Helvetica, sans-serif;
+}
+
+
+h2 {
+  font-size: 40px;
+}
+
+    h2, h3, h4 {
+      color: blue;
+    }
+
+    p {
+      color: black
+    }
+
+    .first, .second {
+      color: pink;
+    }
+
+    #firstid {
+      color: black;
+    }
+
+    #secondid, #thirdid {
+      color: orangered;
+    }
