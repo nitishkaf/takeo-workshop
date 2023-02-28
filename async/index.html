@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel='stylesheet' href="./style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Joke of the Day</h2>
+    <div id="joke">Loading..</div>
+    <button id="jokeBtn">Next Joke</button>
+  </div>
+  <script>
+
+    const jokeEl = document.getElementById('joke')
+    const jokeBtn = document.getElementById('jokeBtn')
+
+
+    const generateJoke = () => {
+
+    fetch('https://v2.jokeapi.dev/joke/Programming')
+    // .then((res) => res.json()) <-- manipulate / consume data
+    // .then((data)=>console.log(data))
+    // .catch((err)=>console.log('Error: ', err)) <-- Error Handling
+    .then((res)=>{
+      if(res.ok){
+        // 200 status = OK status => Loading!
+        return res.json()
+      } else {
+        throw new Error('Error fetching the joke')
+      }
+    })
+    .then((data)=>{
+      if(data.safe && data.type==='single'){
+        jokeEl.innerHTML = data.joke;
+      } else if (data.safe && data.type==='twopart'){
+        jokeEl.innerHTML = `${data.setup} <br /> ${data.delivery}`
+      } else {
+        throw new Error('No safe joke found')
+      }
+    })
+    .catch((error)=>{
+      jokeEl.innerHTML = error.message
+    })
+
+
+
+    }
+
+        jokeBtn.addEventListener('click', generateJoke)
+
+    generateJoke();
+
+
+
+
+  </script>
+</body>
+</html>

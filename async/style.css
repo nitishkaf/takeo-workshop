@@ -1,0 +1,29 @@
+* {
+  font-family: monospace;
+}
+
+body{
+  height: 100vh;
+  background-color: beige;
+  padding: 20px;
+}
+
+.container {
+  background-color: aqua;
+  padding: 40px 20px;
+  max-width: 100%;
+  text-align: center;
+
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+button:hover {
+  background-color: coral;
+  color: white;
+}
