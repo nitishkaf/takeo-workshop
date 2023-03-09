@@ -85,26 +85,20 @@
     
     To handle security vulnerabilities in a web application, I use secure coding practices, such as validating input, escaping output, and using HTTPS to encrypt data in transit. I also use third-party libraries and frameworks that are regularly updated to address security issues. Additionally, I use tools such as web application firewalls and penetration testing to identify and mitigate potential security threats.
     
-10. • Can you describe the main difference between the `Array.forEach()` loop and `Array.map()` methods and why you would pick one versus the other?
+10. Can you describe the main difference between the `Array.forEach()` loop and `Array.map()` methods and why you would pick one versus the other?
     
     
-    | Array.forEach() | Array.map() |
-    | --- | --- |
-    | The Array.forEach()
-     method is used to loop through each element of an array and execute a provided function once for each element. The forEach()
-     method does not return anything, but it can be used to modify the original array. | the Array.map()
-     method is also used to loop through each element of an array and execute a provided function once for each element. However, unlike forEach()
-    , the map()
-     method returns a new array with the results of calling the provided function on each element. |
-    | forEach()
-     is used for executing a function on each element of an array | map()
-     is used for transforming the array into a new array based on the function provided. |
-    | If you simply need to iterate over an array and perform some operation on each element, then you should use forEach() | If you want to transform an array into a new array based on the values in the original array, then map()
-     is the method you should use. |
-    
-    `Array.forEach()`
-    
+ | Method | Description |
+| --- | --- |
+| `Array.forEach()` | The `Array.forEach()` method is used to loop through each element of an array and execute a provided function once for each element. The `forEach()` method does not return anything, but it can be used to modify the original array. |
+| `Array.map()` | The `Array.map()` method is also used to loop through each element of an array and execute a provided function once for each element. However, unlike `forEach()`, the `map()` method returns a new array with the results of calling the provided function on each element. |
+| Use Case | `forEach()` is used for executing a function on each element of an array. `map()` is used for transforming the array into a new array based on the function provided. |
+| When to Use | If you simply need to iterate over an array and perform some operation on each element, then you should use `forEach()`. If you want to transform an array into a new array based on the values in the original array, then `map()` is the method you should use. |
+
+Array.forEach()
+
     ```jsx
+    
     // Define an array of numbers
     const numbers = [1, 2, 3, 4, 5];
     
@@ -115,9 +109,10 @@
     
     // In this example, forEach() is used to loop through each number 
     // in the numbers array and log it to the console.
+    
     ```
     
-    `Array.map()`
+  Array.map()
     
     ```jsx
     // Define an array of numbers
