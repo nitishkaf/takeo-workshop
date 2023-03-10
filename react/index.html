@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.21.2/babel.min.js"
+      integrity="sha512-ccYfmoFEslhbxS5qMNjCMtQEL6Yk6zJn8Bh3Y7hAVEi8K720q6l3MSD7JBWhY0CbITu7G+eaE4xjztDNeEizUQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      // class is reserved word in JS
+
+      // const elementJS = document.createElement("div");
+      // elementJS.classList.add("element-1");
+      // elementJS.innerHTML = "Hello";
+      // <div class='element-1'>Hello</div>
+
+      // const elementReact = React.createElement("div", null, "Hello World");
+      // <div> Hello World </div>
+      // <div class='element-2'>Hello World</div>
+
+      function Hello() {
+        return (
+          <main>
+            <section className="container">
+              <h1>Hello World</h1>
+            </section>
+            <section className="footer">
+              <h2>This is a footer</h2>
+            </section>
+            <Practice name="is AWESOME" age="is OLD" />
+          </main>
+        );
+      }
+
+      function Practice(props) {
+        const { name, age } = props;
+        return (
+          <div className="container">
+            <h1>Learning React</h1>
+            <ul>
+              <li>HTML {name}</li>
+              <li>CSS {age}</li>
+              <li>JS</li>
+            </ul>
+          </div>
+        );
+      }
+
+      function Combine() {
+        return (
+          <div>
+            <Hello />
+            <Practice name="React" age="5 year" />
+          </div>
+        );
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<Combine />);
+    </script>
+  </body>
+</html>

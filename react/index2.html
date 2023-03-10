@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!--
+      <div  class='container'>
+        <h1>Learning React</h1>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JS</li>
+          <li class='react'>React</li>
+        </ul>
+      </div>
+     -->
+
+    <script>
+      /**
+       *
+
+    <main>
+      <section class='container'>
+        <h1>Hello World</h1>
+      </section>
+      <section class="footer">
+        <h2>This is a footer</h2>
+      </section>
+    </main>
+
+    * */
+      const elementReact = React.createElement(
+        "div",
+        {
+          className: "container",
+        },
+        React.createElement("h1", null, "Learning React"),
+        React.createElement(
+          "ul",
+          null,
+          React.createElement("li", null, "HTML"),
+          React.createElement("li", null, "CSS"),
+          React.createElement("li", null, "JS"),
+          React.createElement(
+            "li",
+            {
+              className: "react",
+            },
+            "React"
+          )
+        )
+      );
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(elementReact);
+    </script>
+  </body>
+</html>
